@@ -18,6 +18,7 @@ const a = 123
 // 全局注册 element 组件库
 Vue.use(ElementUI)
 
+
 // 创建 Vue 根实例
 // 把 router 配置到根实例中
 // 通过 render 方法把 App 根组件渲染到 #app 入口节点

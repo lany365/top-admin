@@ -20,11 +20,13 @@
                 </el-form-item>
                 <el-form-item label="内容" prop="content">
                 <!-- <el-input type="textarea" v-model="article.content"></el-input> -->
+                <!--       el-tiptap里面需要指定语言   lang="zh" 没有的话，就显示不出来           -->
                     <el-tiptap
                             v-model="article.content"
                             :extensions="extensions"
                             height="350"
                             placeholder="请输入文章内容"
+                            lang="zh"
                     ></el-tiptap>
                 </el-form-item>
                 <el-form-item label="封面">
@@ -90,15 +92,14 @@
         updateArticle
     } from '@/api/article'
     import {
-        ElementTiptap,
         Doc,
         Text,
         Paragraph,
         Heading,
         Bold,
+        Image,
         Underline,
         Italic,
-        Image,
         Strike,
         ListItem,
         BulletList,
@@ -109,7 +110,8 @@
         Fullscreen,
         Preview,
         CodeBlock,
-        TextColor
+        TextColor,
+        ElementTiptap
     } from 'element-tiptap'
     import 'element-tiptap/lib/index.css'
     import { uploadImage } from '@/api/image'
@@ -156,7 +158,7 @@
                     }),
                     new Underline(), // 下划线
                     new Italic(), // 斜体
-                    new Strike(), // 删除线
+                    new Strike(),// 删除线
                     new HorizontalRule(), // 华丽的分割线
                     new ListItem(),
                     new BulletList(), // 无序列表
