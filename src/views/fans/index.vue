@@ -36,19 +36,19 @@
             // 指定图表的配置项和数据
             var option = {
                 title: {
-                    text: 'ECharts 入门示例'
+                    text: '粉丝来源分析'
                 },
                 tooltip: {},
                 legend: {
-                    data: ['销量']
+                    data: ['来源']
                 },
                 xAxis: {
-                    data: ['衬衫123', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+                    data: ['搜索', '邮件', '视频', '直接', '广告', '推荐']
                 },
                 yAxis: {},
                 series: [
                     {
-                        name: '销量',
+                        name: '数据',
                         type: 'bar',
                         data: [5, 20, 36, 10, 10, 20]
                     }
